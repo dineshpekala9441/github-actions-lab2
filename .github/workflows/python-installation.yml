@@ -2,6 +2,10 @@ name: Installing Python
 
 on: [push]
 
+concurrency:
+    group: exmaple-group
+    cancel-in-progress: true
+
 jobs:
   build:
     strategy:
